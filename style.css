@@ -21,7 +21,6 @@ a{
     height: 100vh;
     display: flex;
     align-items: end;
-    justify-content: end;
     background-image: url('./bg-weather.svg');
     background-size: contain;
 }
@@ -102,17 +101,58 @@ a{
 }
 
 @media(max-width: 430px){
-    div.weather {
+    .weather {
         flex-direction: column;
+        width: 100%;
         background-image: url('https://s3-alpha-sig.figma.com/img/de93/3df7/4f6ff00a8fc0eb0798fedfcde9ded9c1?Expires=1731283200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QFfBPCMt6KY01iMmfMXsB4Zzy8NurJKzHDdYfVXjqlKKjrOdpcCJKdxjFbcZNaBjET69EiLf25BZl~LC-JpG0a-kevMtGNhfD3BTOHQcW4xvreOFJE0RXAaOU3th8GRJtDDWffSpKRBXDun94VxCvQWjwD31PhHJ~10KTKxsYT-tNon3AGsdep1vgxXv9e3B7UqHGmBXlHEsCcD9FwQ~dVffQ2BnzfqkH9UGEkxwZCwe8NTByIvDzC3ks-xOpK-Kpom3-pUQRNBHqcHc6y9vyfcCADhyPwT4EGufujaYm4d7A3~gJUmEJgrYnpcEV~A~kC0rEqvwfatD8hUER09noQ__');
         background-size: contain;
-        width: 375px;
-        height: 803px;
     }
 
     .weather-content {
-        order: 1;
+        width: 100%;
+        /* position: fixed;
+        bottom: 0; */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         height: 482px;
-        width: 375px;
+
+        .input-search {
+            display: none;
+        }
+        h3{
+            margin-top: -755777180px;
+            text-align: center;
+        }
+        h2{
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .info{
+            padding-bottom: 40px;
+            div {
+                margin-bottom: 20оpx;
+            }
+        }
+    }
+    .weather-city{
+        display: flex;
+        margin-top: 214px;
+        margin-right: 99px;
+        
+        h1 {
+            font-size: 64px;
+            margin-bottom: -15px;
+            /* padding: 0; */
+        }
+        .name {
+            h3 {
+                font-size: 30px;
+                margin-bottom: 6.9px;
+            }
+            p {
+                font-size: 10px;
+            }
+        }
     }
 }
